@@ -31,7 +31,6 @@ RSpec.describe 'As a visitor when I visit actor show page' do
     actor1.movies << [movie1, movie2]
 
     visit "/actors/#{actor1.id}"
-    save_and_open_page
     expect(current_path).to eq("/actors/#{actor1.id}")
 
     expect(page).to have_content('Will Smith')
