@@ -5,10 +5,10 @@ class Movie < ApplicationRecord
   belongs_to :studio
 
   def average_age
-    actors(:age).average
+    actors.average(:age).round
   end
 
   def actors_sort_youngest_to_oldest
-    actors.order(age: :desc)
+    actors.order(age: :desc).pluck(:name)
   end
 end
