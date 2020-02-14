@@ -1,0 +1,11 @@
+<h1>Add actor form</h1>
+
+<main>
+  <section>
+    <%= form_tag "/movies/#{@movie.id}", method: :patch do %>
+      <%= label_tag :name %>
+      <%= text_field_tag :name %><br/>
+      <%= submit_tag 'Submit' %><
+    <% end %>
+  </section>
+</main>

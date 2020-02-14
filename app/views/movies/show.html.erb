@@ -5,3 +5,5 @@
 <%= @movie.genre %><br>
 Actors: <%= @movie.actors_sort_youngest_to_oldest %><br>
 Average age: <%= @movie.average_age %>
+
+<h2><%= link_to "Add actor", "/movies/#{@movie.id}/actors/new" %></h2>

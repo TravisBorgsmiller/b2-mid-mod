@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Studio.destroy_all
 Movie.destroy_all
+Actor.destroy_all
 studio1 = Studio.create(
   name: 'Travis Productions'
 )
@@ -27,4 +28,8 @@ movie3 = studio2.movies.create(
   name: 'Hilarious movie',
   creation_year: '2013',
   genre: 'comedy'
+)
+actor4 = movie1.actors.create(
+  name: 'Brad Pitt',
+  age: 48
 )
