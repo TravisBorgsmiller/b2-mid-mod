@@ -33,8 +33,10 @@ ActiveRecord::Schema.define(version: 20200214162452) do
     t.string "name"
     t.string "creation_year"
     t.string "genre"
+    t.bigint "studio_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["studio_id"], name: "index_movies_on_studio_id"
   end
 
   create_table "studios", force: :cascade do |t|
@@ -45,4 +47,5 @@ ActiveRecord::Schema.define(version: 20200214162452) do
 
   add_foreign_key "actor_movies", "actors"
   add_foreign_key "actor_movies", "movies"
+  add_foreign_key "movies", "studios"
 end
