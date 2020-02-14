@@ -35,7 +35,6 @@ RSpec.describe 'As a visitor when I visit movie show page' do
 
     visit "/movies/#{movie2.id}"
     expect(current_path).to eq("/movies/#{movie2.id}")
-
     expect(page).to have_content('Love movie')
     expect(page).to have_content('2011')
     expect(page).to have_content('romantic comedy')
@@ -44,6 +43,6 @@ RSpec.describe 'As a visitor when I visit movie show page' do
     expect(page).to have_content('Kevin Hart')
     expect(page).to_not have_content('Brad Pitt')
     expect(page).to_not have_content('Action movie')
-    expect(page).to have_content('Average age: 45')
+    expect(page).to have_content('Average age: 46')
   end
-end 
+end
