@@ -9,6 +9,7 @@ class Movie < ApplicationRecord
   end
 
   def actors_sort_youngest_to_oldest
-    actors.order(age: :desc).pluck(:name)
+    array = actors.order(age: :desc).pluck(:name)
+    array.split(",").join(", ")
   end
 end
