@@ -1,6 +1,5 @@
 class Actor < ApplicationRecord
-  validate_prescence_of :name, :age
-  belongs_to :studio
+  validates_presence_of :name, :age
   has_many :actor_movies
   has_many :movies, through: :actor_movies
-end 
+end

@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe ActorMovies, type: :model do
-  describe 'validations' do
-    it {should have_many :actors}
-    it {should have_many :movies}
+RSpec.describe ActorMovie, type: :model do
+  describe 'relationships' do
+    it {should belong_to :actor}
+    it {should belong_to :movie}
   end
 end
